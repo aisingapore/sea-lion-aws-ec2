@@ -1,0 +1,20 @@
+services:
+  vllm_container:
+    image: ${INF_IMAGE}
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    # environment:
+    #   - HF_TOKEN=${HF_TOKEN}
+    command:
+      - "--model"
+      - "${MODEL_ID}"
+      - "--enable-chunked-prefill"
+      - "--enable-prefix-caching"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              device_ids: ["0"]
