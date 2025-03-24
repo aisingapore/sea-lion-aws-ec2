@@ -1,0 +1,7 @@
+ami_gpu = "ami-06fe0e101af38d059"
+ami_cpu = "ami-0b6d6dacf350ebc82"
+region = "us-west-2"
+aws_access_key =
+aws_secret_key =
+cpu_instance_type = "m5.xlarge"
+gpu_instance_type = "g6.xlarge"
