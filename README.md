@@ -23,8 +23,16 @@ Follow the steps below to get started:
     terraform plan
     terraform apply
     ```
+
+    Note the output for vLLM & LiteLLM endpoints which would be required for the 2nd part of the setup.
     
-4. Run the bash script to complete the setup:
+4. Run the bash script created by terraform to complete the setup:
     ```
     ./setup.sh
     ```
+
+
+## Cleanup
+```
+terraform destroy
+```
